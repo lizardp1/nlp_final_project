@@ -1,13 +1,11 @@
 # fp-dataset-artifacts
 
-Project by Kaj Bostrom, Jifan Chen, and Greg Durrett. Code by Kaj Bostrom and Jifan Chen.
+Project by Kaj Bostrom, Jifan Chen, and Greg Durrett. Initial Code by Kaj Bostrom and Jifan Chen. Final Code by Liza Pavlova
 
 ## Getting Started
 You'll need Python >= 3.6 to run the code in this repo.
 
-First, clone the repository:
-
-`git clone git@github.com:gregdurrett/fp-dataset-artifacts.git`
+First, clone the repository
 
 Then install the dependencies:
 
@@ -34,8 +32,6 @@ To evaluate the final trained model on the SNLI dev set, you can use
 
 To prevent `run.py` from trying to use a GPU for training, pass the argument `--no_cuda`.
 
-To train/evaluate a question answering model on SQuAD instead, change `--task nli` and `--dataset snli` to `--task qa` and `--dataset squad`.
-
 **Descriptions of other important arguments are available in the comments in `run.py`.**
 
 Data and models will be automatically downloaded and cached in `~/.cache/huggingface/`.
@@ -43,7 +39,6 @@ To change the caching directory, you can modify the shell environment variable `
 For more details, see [this doc](https://huggingface.co/transformers/v4.0.1/installation.html#caching-models).
 
 An ELECTRA-small based NLI model trained on SNLI for 3 epochs (e.g. with the command above) should achieve an accuracy of around 89%, depending on batch size.
-An ELECTRA-small based QA model trained on SQuAD for 3 epochs should achieve around 78 exact match score and 86 F1 score.
 
 ## Working with datasets
 This repo uses [Huggingface Datasets](https://huggingface.co/docs/datasets/) to load data.
